@@ -31,9 +31,9 @@ You are to spend between three and eight hours improving this simple Breakout im
 * Implement commentary with calls to an LLM such as Ollama
 
 # Time Details and Changelist
-_TO DO_
-
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
+
+26/10/2026 16:00 : Initial pull request. Will have a read through the code for an hour or so to get an idea of what I might want to do.
 
 ---
 
