@@ -51,12 +51,22 @@ void Ball::update(float dt)
     if ((position.x >= windowDimensions.x - 2 * RADIUS && _direction.x > 0) || (position.x <= 0 && _direction.x < 0))
     {
         _direction.x *= -1;
+
+        if (_gameManager->getCameraManager())
+        {
+            _gameManager->getCameraManager()->shake(0.1f, 10.0f);
+        }
     }
 
     // bounce on ceiling
     if (position.y <= 0 && _direction.y < 0)
     {
         _direction.y *= -1;
+
+        if (_gameManager->getCameraManager())
+        {
+            _gameManager->getCameraManager()->shake(0.1f, 10.0f);
+        }
     }
 
     // lose life bounce
