@@ -33,7 +33,7 @@ You are to spend between three and eight hours improving this simple Breakout im
 # Time Details and Changelist
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
 
-26/10/2026 16:00 : Initial pull request. Will have a read through the code for an hour or so to get an idea of what I might want to do.
+26/10/2026 16:00-17:00 : Initial pull request. Read through the code and created a list of things that I want to do. Will probably have to look at some SFML documentation to implement some of this.
 
 ---
 
