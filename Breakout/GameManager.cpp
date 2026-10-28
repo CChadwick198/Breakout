@@ -5,7 +5,7 @@
 
 GameManager::GameManager(sf::RenderWindow* window)
     : _window(window), _paddle(nullptr), _ball(nullptr), _brickManager(nullptr), _powerupManager(nullptr),
-    _messagingSystem(nullptr), _ui(nullptr), _cameraManager(nullptr), _pause(false), _time(0.f), _lives(3), _pauseHold(0.f), _levelComplete(false),
+    _messagingSystem(nullptr), _ui(nullptr), _cameraManager(nullptr), _effectManager(nullptr), _pause(false), _time(0.f), _lives(3), _pauseHold(0.f), _levelComplete(false),
     _powerupInEffect({ none,0.f }), _timeLastPowerupSpawned(0.f)
 {
     _font.loadFromFile("font/montS.ttf");
@@ -24,6 +24,7 @@ void GameManager::initialize()
     _powerupManager = new PowerupManager(_window, _paddle, _ball);
     _ui = new UI(_window, _lives, this);
     _cameraManager = new CameraManager(_window);
+    _effectManager = new EffectManager(_window, this);
 
     // Create bricks
     _brickManager->createBricks(5, 10, 80.0f, 30.0f, 5.0f);
@@ -33,7 +34,7 @@ void GameManager::update(float dt)
 {
     _powerupInEffect = _powerupManager->getPowerupInEffect();
     _ui->updatePowerupText(_powerupInEffect);
-    _powerupInEffect.second -= dt;
+    _powerupInEffect.second -= dt;  // Why would this be done if paused?
     
 
     if (_lives <= 0)

@@ -1,4 +1,10 @@
 #include "EffectFastBall.h"
+#include "GameManager.h"
+
+EffectFastBall::EffectFastBall(GameManager* gameManager, float duration)
+	: Effect(gameManager, duration)
+{
+}
 
 void EffectFastBall::applyEffect()
 {

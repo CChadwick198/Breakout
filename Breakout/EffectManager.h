@@ -1,6 +1,4 @@
 #pragma once
-#include "GameManager.h"
-#include "CONSTANTS.h"
 
 /* The different type of Effects */
 #include "Effect.h"	// EffectBase
@@ -11,6 +9,8 @@
 #include "EffectSmallPaddle.h"
 
 #include <SFML/Graphics.hpp>
+#include "CONSTANTS.h"
+
 #include <vector>
 #include <memory>
 #include <random>
@@ -28,7 +28,7 @@ private:
 	sf::RenderWindow* _window;
 	GameManager* _gameManager;
 
-	std::vector<std::unique_ptr<EffectBase>> _activeEffects;		// Used for updating the currently active effects.
+	std::vector<std::unique_ptr<Effect>> _activeEffects;		// Used for updating the currently active effects.
 	std::vector<std::pair<POWERUPS, float>> _activePowerups;	// Used for storing which powerups are active at a given time and for how long.
 };
 

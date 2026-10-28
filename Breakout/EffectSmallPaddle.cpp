@@ -1,4 +1,10 @@
 #include "EffectSmallPaddle.h"
+#include "GameManager.h"
+
+EffectSmallPaddle::EffectSmallPaddle(GameManager* gameManager, float duration)
+	: Effect(gameManager, duration)
+{
+}
 
 void EffectSmallPaddle::applyEffect()
 {

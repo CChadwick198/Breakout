@@ -1,4 +1,5 @@
 #include "EffectManager.h"
+#include "GameManager.h"
 
 EffectManager::EffectManager(sf::RenderWindow* window, GameManager* gameManager)
 	: _window(window), _gameManager(gameManager)

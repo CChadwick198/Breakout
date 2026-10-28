@@ -1,4 +1,11 @@
 #include "EffectBigPaddle.h"
+#include "GameManager.h"
+
+EffectBigPaddle::EffectBigPaddle(GameManager* gameManager, float duration)
+	: Effect(gameManager, duration)
+{
+
+}
 
 void EffectBigPaddle::applyEffect()
 {

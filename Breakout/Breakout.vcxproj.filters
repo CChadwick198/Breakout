@@ -69,9 +69,6 @@
     <ClCompile Include="CameraManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Effect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EffectManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -88,6 +85,9 @@
       <Filter>Effects</Filter>
     </ClCompile>
     <ClCompile Include="EffectSlowBall.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
       <Filter>Effects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -140,9 +140,6 @@
     <ClInclude Include="CameraManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Effect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EffectBigPaddle.h">
       <Filter>Effects</Filter>
     </ClInclude>
@@ -159,6 +156,9 @@
       <Filter>Effects</Filter>
     </ClInclude>
     <ClInclude Include="EffectSlowBall.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
       <Filter>Effects</Filter>
     </ClInclude>
   </ItemGroup>

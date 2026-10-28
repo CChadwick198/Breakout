@@ -1,10 +1,10 @@
 #pragma once
 #include "Effect.h"
 
-class EffectSlowBall : public EffectBase
+class EffectSlowBall : public Effect
 {
 public:
-	EffectSlowBall(GameManager* gameManager, float duration) : EffectBase(gameManager, duration) {}
+	EffectSlowBall(GameManager* gameManager, float duration);
 
 	virtual void applyEffect() override;
 	virtual void endEffect() override;

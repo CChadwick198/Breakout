@@ -1,11 +1,11 @@
 #pragma once
-#include "GameManager.h"
-#include "CONSTANTS.h"
 
-class EffectBase
+class GameManager;
+
+class Effect
 {
 public:
-	EffectBase(GameManager* gameManager, float duration);
+	Effect(GameManager* gameManager, float duration);
 
 	virtual void update(float dt);
 

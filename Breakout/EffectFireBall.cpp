@@ -1,8 +1,14 @@
 #include "EffectFireBall.h"
+#include "GameManager.h"
+
+EffectFireBall::EffectFireBall(GameManager* gameManager, float duration)
+	: Effect(gameManager, duration)
+{
+}
 
 void EffectFireBall::update(float dt)
 {
-	EffectBase::update(dt);
+	Effect::update(dt);
 
 	if (_duration <= 0.f) { return; }
 

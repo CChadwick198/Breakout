@@ -8,6 +8,7 @@
 #include "MessagingSystem.h"
 #include "UI.h"
 #include "CameraManager.h"
+#include "EffectManager.h"
 
 
 
@@ -50,6 +51,7 @@ private:
     MessagingSystem* _messagingSystem;
     UI* _ui;
     CameraManager* _cameraManager;
+    EffectManager* _effectManager;
 
     static constexpr float PAUSE_TIME_BUFFER = 0.5f;
     static constexpr float POWERUP_FREQUENCY = 7.5f;    // time between minimum powerup spawn

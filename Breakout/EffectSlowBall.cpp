@@ -1,4 +1,10 @@
 #include "EffectSlowBall.h"
+#include "GameManager.h"
+
+EffectSlowBall::EffectSlowBall(GameManager* gameManager, float duration)
+	: Effect(gameManager, duration)
+{
+}
 
 void EffectSlowBall::applyEffect()
 {
