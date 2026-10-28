@@ -1,0 +1,34 @@
+#pragma once
+#include "GameManager.h"
+#include "CONSTANTS.h"
+
+/* The different type of Effects */
+#include "Effect.h"	// EffectBase
+#include "EffectBigPaddle.h"
+#include "EffectFastBall.h"
+#include "EffectFireBall.h"
+#include "EffectSlowBall.h"
+#include "EffectSmallPaddle.h"
+
+#include <SFML/Graphics.hpp>
+#include <vector>
+#include <memory>
+#include <random>
+
+class EffectManager
+{
+public:
+	EffectManager(sf::RenderWindow* window, GameManager* gameManager);
+
+	void update(float dt);
+	void addEffect(std::pair<POWERUPS, float> givenPowerup);
+
+	std::vector<std::pair<POWERUPS, float>> getActivePowerups() const;
+private:
+	sf::RenderWindow* _window;
+	GameManager* _gameManager;
+
+	std::vector<std::unique_ptr<EffectBase>> _activeEffects;		// Used for updating the currently active effects.
+	std::vector<std::pair<POWERUPS, float>> _activePowerups;	// Used for storing which powerups are active at a given time and for how long.
+};
+

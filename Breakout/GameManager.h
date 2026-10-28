@@ -22,6 +22,7 @@ public:
     void powerupEffect(POWERUPS pu, float t);
 
     Paddle* getPaddle() const;
+    Ball* getBall() const;
     BrickManager* getBrickManager() const;
     PowerupManager* getPowerupManager() const;
     sf::RenderWindow* getWindow() const;

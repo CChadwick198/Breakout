@@ -143,6 +143,12 @@
     <ClCompile Include="BrickManager.cpp" />
     <ClCompile Include="CameraManager.cpp" />
     <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectBigPaddle.cpp" />
+    <ClCompile Include="EffectFastBall.cpp" />
+    <ClCompile Include="EffectFireBall.cpp" />
+    <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="EffectSlowBall.cpp" />
+    <ClCompile Include="EffectSmallPaddle.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
@@ -165,6 +171,12 @@
     <ClInclude Include="CameraManager.h" />
     <ClInclude Include="CONSTANTS.h" />
     <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectBigPaddle.h" />
+    <ClInclude Include="EffectFastBall.h" />
+    <ClInclude Include="EffectFireBall.h" />
+    <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="EffectSlowBall.h" />
+    <ClInclude Include="EffectSmallPaddle.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="MessagingSystem.h" />
     <ClInclude Include="Paddle.h" />

@@ -16,6 +16,9 @@
     <Filter Include="Powerups">
       <UniqueIdentifier>{f3758f5c-ad80-41b1-a2fb-fb910363ec2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{f2e9d248-fac2-4c95-a0da-a4df554ac473}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,6 +72,24 @@
     <ClCompile Include="Effect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EffectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectBigPaddle.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSmallPaddle.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectFireBall.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectFastBall.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSlowBall.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h">
@@ -121,6 +142,24 @@
     </ClInclude>
     <ClInclude Include="Effect.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectBigPaddle.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSmallPaddle.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectFireBall.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectFastBall.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSlowBall.h">
+      <Filter>Effects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

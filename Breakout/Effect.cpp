@@ -1,6 +1,12 @@
 #include "Effect.h"
 
-void Effect::update(float dt)
+EffectBase::EffectBase(GameManager* gameManager, float duration)
+	: _gameManager(gameManager), _duration(duration)
+{
+	//	applyEffect();
+}
+
+void EffectBase::update(float dt)
 {
 	_duration -= dt;
 
@@ -9,3 +15,5 @@ void Effect::update(float dt)
 		endEffect();
 	}
 }
+
+float EffectBase::getDuration() const { return _duration; }

@@ -1,0 +1,17 @@
+#include "EffectSmallPaddle.h"
+
+void EffectSmallPaddle::applyEffect()
+{
+	if (auto* paddle = _gameManager->getPaddle())
+	{
+		paddle->setWidth(0.67f);
+	}
+}
+
+void EffectSmallPaddle::endEffect()
+{
+	if (auto* paddle = _gameManager->getPaddle())
+	{
+		paddle->setWidth(1.0f);
+	}
+}
