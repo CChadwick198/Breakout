@@ -4,7 +4,7 @@
 Effect::Effect(GameManager* gameManager, float duration)
 	: _gameManager(gameManager), _duration(duration)
 {
-	//	applyEffect();
+	//applyEffect();
 }
 
 void Effect::update(float dt)

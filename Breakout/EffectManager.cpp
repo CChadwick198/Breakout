@@ -25,6 +25,12 @@ void EffectManager::update(float dt)
 			++it;
 		}
 	}
+
+	/* Make sure POWERUPS/duration list is up to date. */
+	for (size_t i = 0; i < _activePowerups.size(); ++i)
+	{
+		_activePowerups[i].second = _activeEffects[i]->getDuration();
+	}
 }
 
 void EffectManager::addEffect(std::pair<POWERUPS, float> givenPowerup)
@@ -41,6 +47,8 @@ void EffectManager::addEffect(std::pair<POWERUPS, float> givenPowerup)
 		size_t index = std::distance(_activePowerups.begin(), it);
 		_activeEffects.at(index)->setDuration(givenPowerup.second);
 		/* Maybe call the applyEffect again. Won't do that yet incase it breaks everything. */
+
+		return;
 	}
 
 	/* Create new unique_ptr for the given powerup and add it to the effects list. */
@@ -63,6 +71,9 @@ void EffectManager::addEffect(std::pair<POWERUPS, float> givenPowerup)
 		_activeEffects.push_back(std::make_unique<EffectFireBall>(_gameManager, givenPowerup.second));
 		break;
 	}
+
+	/* Make sure to apply the newly added effect. */
+	_activeEffects[_activeEffects.size() - 1]->applyEffect();
 
 	_activePowerups.push_back(givenPowerup);
 }

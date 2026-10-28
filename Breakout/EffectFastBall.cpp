@@ -10,7 +10,7 @@ void EffectFastBall::applyEffect()
 {
 	if (auto* ball = _gameManager->getBall())
 	{
-		ball->setVelocity(5.0f);
+		ball->setVelocity(2.0f);
 	}
 }
 
