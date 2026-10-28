@@ -93,6 +93,8 @@ void GameManager::update(float dt)
     auto newPowerupAcquired = _powerupManager->getPowerupInEffect();  // Will remove _powerupInEffect from GameManager later as I don't see why we would need it
     _effectManager->addEffect(newPowerupAcquired);
 
+    _effectManager->update(dt);
+
     _cameraManager->update(dt);
 }
 
