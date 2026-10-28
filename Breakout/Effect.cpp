@@ -17,4 +17,9 @@ void Effect::update(float dt)
 	}
 }
 
+void Effect::setDuration(float duration)
+{
+	_duration = duration;
+}
+
 float Effect::getDuration() const { return _duration; }

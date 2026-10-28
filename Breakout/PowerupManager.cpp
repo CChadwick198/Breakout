@@ -18,19 +18,24 @@ PowerupManager::~PowerupManager()
 void PowerupManager::update(float dt)
 {
     // tick down powerup effect time. Reset if elapsed.
-    if (_powerupInEffect)
+    /*if (_powerupInEffect)
     {
         _powerupInEffect->second -= dt;
         if (_powerupInEffect->second <= 0)
         {
             _powerupInEffect.reset();
         }
-    }
+    }*/
+
+    // PowerupManager now checks if any of the powerups have just been activated and stores it in _powerupInEffect.
+    _powerupInEffect.reset();
+
+    checkCollision();   // Check if any of the powerups are touching the paddle.
 
 
     for (auto it = _powerups.begin(); it != _powerups.end(); )
     {
-        checkCollision();
+        //checkCollision(); // Don't know why this is in the for loop
         
         // Delete powerups queued for removal
         (*it)->update(dt);

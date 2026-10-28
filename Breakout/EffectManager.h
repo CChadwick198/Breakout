@@ -24,7 +24,10 @@ public:
 	void addEffect(std::pair<POWERUPS, float> givenPowerup);
 
 	std::vector<std::pair<POWERUPS, float>> getActivePowerups() const;
+	std::pair<POWERUPS, float> getFirstActivePowerup();	// Using this for now so it doesn't break.
 private:
+	std::vector<std::pair<POWERUPS, float>>::iterator findActivePowerup(POWERUPS powerup);
+
 	sf::RenderWindow* _window;
 	GameManager* _gameManager;
 

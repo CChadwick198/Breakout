@@ -12,6 +12,8 @@ public:
 	virtual void applyEffect() = 0;
 	virtual void endEffect() = 0;
 
+	void setDuration(float duration);
+
 	float getDuration() const;
 	
 protected:

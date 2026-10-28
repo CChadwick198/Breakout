@@ -32,10 +32,11 @@ void GameManager::initialize()
 
 void GameManager::update(float dt)
 {
-    _powerupInEffect = _powerupManager->getPowerupInEffect();
-    _ui->updatePowerupText(_powerupInEffect);
-    _powerupInEffect.second -= dt;  // Why would this be done if paused?
-    
+    //_powerupInEffect = _powerupManager->getPowerupInEffect();
+    //_ui->updatePowerupText(_powerupInEffect);
+    //_powerupInEffect.second -= dt;  // Why would this be done if paused?
+
+    _ui->updatePowerupText(_effectManager->getFirstActivePowerup()); // For now do this until I implement multiple effects displayed on the UI.
 
     if (_lives <= 0)
     {
@@ -86,7 +87,12 @@ void GameManager::update(float dt)
     // update everything 
     _paddle->update(dt);
     _ball->update(dt);
+
     _powerupManager->update(dt);
+
+    auto newPowerupAcquired = _powerupManager->getPowerupInEffect();  // Will remove _powerupInEffect from GameManager later as I don't see why we would need it
+    _effectManager->addEffect(newPowerupAcquired);
+
     _cameraManager->update(dt);
 }
 
